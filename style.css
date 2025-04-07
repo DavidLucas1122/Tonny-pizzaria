@@ -12,6 +12,11 @@ a{
 ul,ol,li{
     list-style: none;
 }
+:root{
+    --primary-color: #F07807;
+    --secundary-color: #FBDDC1;
+    --default-shadow:  0 4px 6px #0008;
+}
 
 body{
     padding: 0 80px;
@@ -21,10 +26,10 @@ header{
     top: 60px;
     height: 60px;
     width: calc(100% - 160px);
-    background-color: aqua;
     position: fixed;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 header menu{
     align-items: center;
@@ -38,7 +43,16 @@ header li{
 }
 header li:hover{
     background-color: #FBDDC1;
-    box-shadow: 0px 4px 6px #0008;;
+    box-shadow: var(--default-shadow)
+}
+
+header button{
+    height: 48px;
+    width: 120px;
+    background-color: var(--secundary-color);
+    border-radius: 12px;
+    border: none;
+    box-shadow: var(--default-shadow);
 }
 main{
     height: 700px;
