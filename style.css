@@ -12,3 +12,21 @@ a{
 ul,ol,li{
     list-style: none;
 }
+
+body{
+
+}
+header{
+    height: 60px;
+    width: 100%;
+    background-color: aqua;
+    position: absolute;
+}
+main{
+    height: 700px;
+    background-color: red;
+}
+footer{
+    height: 526px;
+    background-color: blueviolet;
+}
