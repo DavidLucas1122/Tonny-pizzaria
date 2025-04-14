@@ -15,21 +15,23 @@ ul,ol,li{
 :root{
     --primary-color: #F07807;
     --secundary-color: #FBDDC1;
-    --default-shadow:  0 4px 6px #0008;
+    --default-shadow: 0 4px 6px #0008;
+    --default-padding: 0 80px;
 }
 
 body{
-    padding: 0 80px;
     font-family: "Poppins", sans-serif;
+    background-color: var(--secundary-color);
 }
 header{
     top: 60px;
     height: 60px;
-    width: calc(100% - 160px);
+    width: 100%;
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: var(--default-padding)
 }
 header menu{
     align-items: center;
@@ -54,9 +56,115 @@ header button{
     border: none;
     box-shadow: var(--default-shadow);
 }
-main{
-    height: 700px;
-    background-color: red;
+
+section{
+    height: 100vh;
+    padding: var(--default-padding);
+}
+.home{
+    background-image: url(./img/background.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+.hero{
+    gap: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.hero h2{
+    width: 558px;
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 64px;
+}
+
+.hero span{
+    color: var(--primary-color);
+}
+.conteiner-pizza{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pizza {
+    position: relative;
+    background-color: #F07807;
+    display: flex;
+    border-radius: 12px;
+}
+.adicionar{
+    position: absolute;
+    right: -18px;
+    top: -18px;
+    display: grid;
+    place-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: var(--primary-color);
+    border: 3px solid white;
+    border-radius: 13px;
+    font-size: 32px;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+.pizza:hover .adicionar{
+    opacity: 1;
+}
+
+.animacao{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 12px;
+
+}
+
+.conteiner-info{
+    position: absolute;
+    display: flex;
+    padding: 0 12px;
+    bottom: -36px;
+    width: 100%;
+    height: 36px;
+    background-color:#0008;
+    border-radius: 0 0 12px 12px;
+    align-items: center;
+}
+.conteiner-info p{
+    width: 120px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+}
+.conteiner-info span{
+    display: grid;
+    place-content: center;
+    width: 57px;
+    height: 20px;
+    background-color: var(--primary-color);
+    font-size: 12px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.pizza:hover .conteiner-info{
+    bottom: 0;
+}
+
+.cardapio{
+    background-color: lightcoral;
+}
+.servicos{
+    background-color: lightgreen;
 }
 footer{
     height: 526px;
