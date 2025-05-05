@@ -61,6 +61,8 @@ section{
     height: 100vh;
     padding: var(--default-padding);
 }
+
+
 .home{
     background-image: url(./img/background.svg);
     background-repeat: no-repeat;
@@ -86,16 +88,19 @@ section{
 .hero span{
     color: var(--primary-color);
 }
-.conteiner-pizza{
+.conteiner-produtos{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.pizza {
+.produtos{
     position: relative;
     background-color: #F07807;
     display: flex;
     border-radius: 12px;
+}
+.produtos:hover .adicionar{
+    opacity: 1;
 }
 .adicionar{
     position: absolute;
@@ -113,9 +118,7 @@ section{
     opacity: 0;
     transition: .5s;
 }
-.pizza:hover .adicionar{
-    opacity: 1;
-}
+
 
 .animacao{
     position: absolute;
@@ -156,13 +159,82 @@ section{
     color: #fff;
 }
 
-.pizza:hover .conteiner-info{
+.produtos:hover .conteiner-info{
     bottom: 0;
 }
 
 .cardapio{
-    background-color: lightcoral;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
+
+.titulo-secao{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.titulo-secao h3{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.cardapio-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 260px;
+    border-bottom: 2px solid var(--secundary-color);
+
+}
+.cabecalho-item{
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-color);
+}
+
+cabecalho-item h4,
+.cabecalho-item a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.cardapio-item.bebidas{
+    border: none;
+}
+
+.cardapio-item.bebidas .produtos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 16px;
+    transition: .5s;
+}
+
+.cardapio-item.bebidas .produtos:hover{
+    box-shadow: 2px 2px 8px #bbb;
+}
+
+.cardapio-item.bebidas .valor{
+    font-size: 1rem;
+    color: var(--primary-color);
+    width: 100%;
+}
+.cardapio-item.bebidas .descricao{
+    font-size: 0.5rem;
+    width: 100%;
+}
+
+
+
+
+
+
 .servicos{
     background-color: lightgreen;
 }
